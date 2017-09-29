@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1E277E0A1F56CC4F0077A324 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E091F56CC4F0077A324 /* AppDelegate.m */; };
-		1E277E0D1F56CC4F0077A324 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E0C1F56CC4F0077A324 /* ViewController.m */; };
+		1E277E0D1F56CC4F0077A324 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E0C1F56CC4F0077A324 /* ObjCViewController.m */; };
 		1E277E101F56CC4F0077A324 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E277E0E1F56CC4F0077A324 /* Main.storyboard */; };
 		1E277E121F56CC4F0077A324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E277E111F56CC4F0077A324 /* Assets.xcassets */; };
 		1E277E151F56CC4F0077A324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E277E131F56CC4F0077A324 /* LaunchScreen.storyboard */; };
 		1E277E181F56CC4F0077A324 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E171F56CC4F0077A324 /* main.m */; };
 		1E277E221F56CC4F0077A324 /* Async_Fetch_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E211F56CC4F0077A324 /* Async_Fetch_ExampleTests.m */; };
 		1E277E2D1F56CC500077A324 /* Async_Fetch_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E2C1F56CC500077A324 /* Async_Fetch_ExampleUITests.m */; };
+		1E277E3E1F56F2020077A324 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E3D1F56F2020077A324 /* SwiftViewController.swift */; };
+		1E8B36741F5D86A600CF4DE7 /* SwiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B36731F5D86A600CF4DE7 /* SwiftTableViewCell.swift */; };
+		1EA493021F58002100802500 /* SwiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA493011F58002100802500 /* SwiftViewModel.swift */; };
+		1EA493041F58004D00802500 /* SwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA493031F58004D00802500 /* SwiftModel.swift */; };
+		1EA493071F5803AA00802500 /* ObjCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA493061F5803AA00802500 /* ObjCModel.m */; };
+		1EA4930A1F5803C100802500 /* ObjCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA493091F5803C100802500 /* ObjCViewModel.m */; };
+		1ECD74EA1F5D8127002AFBAB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD74E91F5D8127002AFBAB /* SwiftyJSON.swift */; };
+		1EEABB3E1F7E4EDD007E134C /* ObjCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEABB3D1F7E4EDD007E134C /* ObjCTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +46,8 @@
 		1E277E051F56CC4F0077A324 /* Async Fetch Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Async Fetch Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E277E081F56CC4F0077A324 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E277E091F56CC4F0077A324 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1E277E0B1F56CC4F0077A324 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1E277E0C1F56CC4F0077A324 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1E277E0B1F56CC4F0077A324 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
+		1E277E0C1F56CC4F0077A324 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		1E277E0F1F56CC4F0077A324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E277E111F56CC4F0077A324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E277E141F56CC4F0077A324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +59,18 @@
 		1E277E281F56CC4F0077A324 /* Async Fetch ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Async Fetch ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E277E2C1F56CC500077A324 /* Async_Fetch_ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Async_Fetch_ExampleUITests.m; sourceTree = "<group>"; };
 		1E277E2E1F56CC500077A324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E277E3C1F56F2010077A324 /* Async Fetch Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Async Fetch Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		1E277E3D1F56F2020077A324 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		1E8B36731F5D86A600CF4DE7 /* SwiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTableViewCell.swift; sourceTree = "<group>"; };
+		1EA493011F58002100802500 /* SwiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewModel.swift; sourceTree = "<group>"; };
+		1EA493031F58004D00802500 /* SwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftModel.swift; sourceTree = "<group>"; };
+		1EA493051F5803AA00802500 /* ObjCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCModel.h; sourceTree = "<group>"; };
+		1EA493061F5803AA00802500 /* ObjCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCModel.m; sourceTree = "<group>"; };
+		1EA493081F5803C100802500 /* ObjCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewModel.h; sourceTree = "<group>"; };
+		1EA493091F5803C100802500 /* ObjCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewModel.m; sourceTree = "<group>"; };
+		1ECD74E91F5D8127002AFBAB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		1EEABB3C1F7E4EDD007E134C /* ObjCTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCTableViewCell.h; sourceTree = "<group>"; };
+		1EEABB3D1F7E4EDD007E134C /* ObjCTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +123,14 @@
 			children = (
 				1E277E081F56CC4F0077A324 /* AppDelegate.h */,
 				1E277E091F56CC4F0077A324 /* AppDelegate.m */,
-				1E277E0B1F56CC4F0077A324 /* ViewController.h */,
-				1E277E0C1F56CC4F0077A324 /* ViewController.m */,
+				1EEABB3A1F7E49CE007E134C /* Objective-C */,
+				1EEABB3B1F7E49E2007E134C /* Swift */,
 				1E277E0E1F56CC4F0077A324 /* Main.storyboard */,
 				1E277E111F56CC4F0077A324 /* Assets.xcassets */,
 				1E277E131F56CC4F0077A324 /* LaunchScreen.storyboard */,
 				1E277E161F56CC4F0077A324 /* Info.plist */,
 				1E277E171F56CC4F0077A324 /* main.m */,
+				1E277E3C1F56F2010077A324 /* Async Fetch Example-Bridging-Header.h */,
 			);
 			path = "Async Fetch Example";
 			sourceTree = "<group>";
@@ -130,6 +151,33 @@
 				1E277E2E1F56CC500077A324 /* Info.plist */,
 			);
 			path = "Async Fetch ExampleUITests";
+			sourceTree = "<group>";
+		};
+		1EEABB3A1F7E49CE007E134C /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				1EA493051F5803AA00802500 /* ObjCModel.h */,
+				1EA493061F5803AA00802500 /* ObjCModel.m */,
+				1EA493081F5803C100802500 /* ObjCViewModel.h */,
+				1EA493091F5803C100802500 /* ObjCViewModel.m */,
+				1E277E0B1F56CC4F0077A324 /* ObjCViewController.h */,
+				1E277E0C1F56CC4F0077A324 /* ObjCViewController.m */,
+				1EEABB3C1F7E4EDD007E134C /* ObjCTableViewCell.h */,
+				1EEABB3D1F7E4EDD007E134C /* ObjCTableViewCell.m */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
+		1EEABB3B1F7E49E2007E134C /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				1ECD74E91F5D8127002AFBAB /* SwiftyJSON.swift */,
+				1E8B36731F5D86A600CF4DE7 /* SwiftTableViewCell.swift */,
+				1E277E3D1F56F2020077A324 /* SwiftViewController.swift */,
+				1EA493011F58002100802500 /* SwiftViewModel.swift */,
+				1EA493031F58004D00802500 /* SwiftModel.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +247,7 @@
 				TargetAttributes = {
 					1E277E041F56CC4F0077A324 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					1E277E1C1F56CC4F0077A324 = {
@@ -265,8 +314,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E277E0D1F56CC4F0077A324 /* ViewController.m in Sources */,
+				1E277E3E1F56F2020077A324 /* SwiftViewController.swift in Sources */,
+				1EA493041F58004D00802500 /* SwiftModel.swift in Sources */,
+				1EA4930A1F5803C100802500 /* ObjCViewModel.m in Sources */,
+				1EA493021F58002100802500 /* SwiftViewModel.swift in Sources */,
+				1E277E0D1F56CC4F0077A324 /* ObjCViewController.m in Sources */,
+				1E8B36741F5D86A600CF4DE7 /* SwiftTableViewCell.swift in Sources */,
+				1EA493071F5803AA00802500 /* ObjCModel.m in Sources */,
+				1ECD74EA1F5D8127002AFBAB /* SwiftyJSON.swift in Sources */,
 				1E277E181F56CC4F0077A324 /* main.m in Sources */,
+				1EEABB3E1F7E4EDD007E134C /* ObjCTableViewCell.m in Sources */,
 				1E277E0A1F56CC4F0077A324 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +479,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -430,12 +488,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NC74HZ33YN;
 				INFOPLIST_FILE = "Async Fetch Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deftapplications.Async-Fetch-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Async Fetch Example/Async Fetch Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,12 +507,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NC74HZ33YN;
 				INFOPLIST_FILE = "Async Fetch Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deftapplications.Async-Fetch-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Async Fetch Example/Async Fetch Example-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -457,10 +524,12 @@
 		1E277E351F56CC500077A324 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NC74HZ33YN;
 				INFOPLIST_FILE = "Async Fetch ExampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deftapplications.Async-Fetch-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,10 +541,12 @@
 		1E277E361F56CC500077A324 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NC74HZ33YN;
 				INFOPLIST_FILE = "Async Fetch ExampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deftapplications.Async-Fetch-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,9 +558,11 @@
 		1E277E381F56CC500077A324 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NC74HZ33YN;
 				INFOPLIST_FILE = "Async Fetch ExampleUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deftapplications.Async-Fetch-ExampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,9 +574,11 @@
 		1E277E391F56CC500077A324 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NC74HZ33YN;
 				INFOPLIST_FILE = "Async Fetch ExampleUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deftapplications.Async-Fetch-ExampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
