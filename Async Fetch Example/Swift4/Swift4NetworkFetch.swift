@@ -18,11 +18,11 @@ struct CodeableLocalCommit: Codable
         
         struct Author: Codable
         {
-            let name: String?
-            let date: Date?
+            let name: String
+            let date: Date
         }
         
-        let message: String?
+        let message: String
     }
 
 }
@@ -41,8 +41,7 @@ class Swift4FetchNetworkData {
         
         DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
             
-            let swiftURLString = "https://api.github.com/repos/apple/swift/commits?per_page=100"
-            guard let swiftURL = URL(string: swiftURLString) else { return }
+            guard let swiftURL = URL(string: ApiUrl.GitHubSwiftRepository) else { return }
             
             if let jsonData = try? Data(contentsOf: swiftURL) {
                 

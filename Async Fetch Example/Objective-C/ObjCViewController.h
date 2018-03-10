@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UIRefreshControl *refreshController;
+@property (strong, nonatomic) NSDateFormatter *stringToDateFormatter;
+@property (strong, nonatomic) NSDateFormatter *dateToStringFormatter;
 
 @property (strong, nonatomic) ObjCViewModel *viewModel;
 

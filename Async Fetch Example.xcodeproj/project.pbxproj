@@ -15,7 +15,7 @@
 		1E277E181F56CC4F0077A324 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E171F56CC4F0077A324 /* main.m */; };
 		1E277E221F56CC4F0077A324 /* Async_Fetch_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E211F56CC4F0077A324 /* Async_Fetch_ExampleTests.m */; };
 		1E277E2D1F56CC500077A324 /* Async_Fetch_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E277E2C1F56CC500077A324 /* Async_Fetch_ExampleUITests.m */; };
-		1E8B36741F5D86A600CF4DE7 /* SwiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B36731F5D86A600CF4DE7 /* SwiftTableViewCell.swift */; };
+		1E8B36741F5D86A600CF4DE7 /* Swift3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B36731F5D86A600CF4DE7 /* Swift3TableViewCell.swift */; };
 		1EA493071F5803AA00802500 /* ObjCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA493061F5803AA00802500 /* ObjCModel.m */; };
 		1EA4930A1F5803C100802500 /* ObjCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA493091F5803C100802500 /* ObjCViewModel.m */; };
 		1ECD74EA1F5D8127002AFBAB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD74E91F5D8127002AFBAB /* SwiftyJSON.swift */; };
@@ -25,6 +25,7 @@
 		1EFC0E3E20540F6A00FF472B /* Swift4NetworkFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC0E3D20540F6A00FF472B /* Swift4NetworkFetch.swift */; };
 		1EFC0E40205422C000FF472B /* Swift4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC0E3F205422C000FF472B /* Swift4ViewController.swift */; };
 		1EFC0E422054235E00FF472B /* Swift4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC0E412054235E00FF472B /* Swift4TableViewCell.swift */; };
+		1EFC0E452054844F00FF472B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC0E442054844F00FF472B /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,7 @@
 		1E277E2C1F56CC500077A324 /* Async_Fetch_ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Async_Fetch_ExampleUITests.m; sourceTree = "<group>"; };
 		1E277E2E1F56CC500077A324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E277E3C1F56F2010077A324 /* Async Fetch Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Async Fetch Example-Bridging-Header.h"; sourceTree = "<group>"; };
-		1E8B36731F5D86A600CF4DE7 /* SwiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTableViewCell.swift; sourceTree = "<group>"; };
+		1E8B36731F5D86A600CF4DE7 /* Swift3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift3TableViewCell.swift; sourceTree = "<group>"; };
 		1EA493051F5803AA00802500 /* ObjCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCModel.h; sourceTree = "<group>"; };
 		1EA493061F5803AA00802500 /* ObjCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCModel.m; sourceTree = "<group>"; };
 		1EA493081F5803C100802500 /* ObjCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewModel.h; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		1EFC0E3D20540F6A00FF472B /* Swift4NetworkFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift4NetworkFetch.swift; sourceTree = "<group>"; };
 		1EFC0E3F205422C000FF472B /* Swift4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift4ViewController.swift; sourceTree = "<group>"; };
 		1EFC0E412054235E00FF472B /* Swift4TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift4TableViewCell.swift; sourceTree = "<group>"; };
+		1EFC0E442054844F00FF472B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				1E277E081F56CC4F0077A324 /* AppDelegate.h */,
 				1E277E091F56CC4F0077A324 /* AppDelegate.m */,
+				1EFC0E442054844F00FF472B /* Constant.swift */,
 				1EFC0E43205436D800FF472B /* Swift4 */,
 				1EFC0E3C20540C7100FF472B /* Swift3 */,
 				1EEABB3A1F7E49CE007E134C /* Objective-C */,
@@ -178,7 +181,7 @@
 			children = (
 				1EFC0E372054018A00FF472B /* Swift3NetworkFetch.swift */,
 				1ECD74E91F5D8127002AFBAB /* SwiftyJSON.swift */,
-				1E8B36731F5D86A600CF4DE7 /* SwiftTableViewCell.swift */,
+				1E8B36731F5D86A600CF4DE7 /* Swift3TableViewCell.swift */,
 				1EFC0E39205409AD00FF472B /* Swift3ViewController.swift */,
 			);
 			path = Swift3;
@@ -330,11 +333,12 @@
 			files = (
 				1EA4930A1F5803C100802500 /* ObjCViewModel.m in Sources */,
 				1E277E0D1F56CC4F0077A324 /* ObjCViewController.m in Sources */,
-				1E8B36741F5D86A600CF4DE7 /* SwiftTableViewCell.swift in Sources */,
+				1E8B36741F5D86A600CF4DE7 /* Swift3TableViewCell.swift in Sources */,
 				1EFC0E3E20540F6A00FF472B /* Swift4NetworkFetch.swift in Sources */,
 				1EA493071F5803AA00802500 /* ObjCModel.m in Sources */,
 				1EFC0E422054235E00FF472B /* Swift4TableViewCell.swift in Sources */,
 				1EFC0E40205422C000FF472B /* Swift4ViewController.swift in Sources */,
+				1EFC0E452054844F00FF472B /* Constant.swift in Sources */,
 				1ECD74EA1F5D8127002AFBAB /* SwiftyJSON.swift in Sources */,
 				1E277E181F56CC4F0077A324 /* main.m in Sources */,
 				1EFC0E3A205409AD00FF472B /* Swift3ViewController.swift in Sources */,

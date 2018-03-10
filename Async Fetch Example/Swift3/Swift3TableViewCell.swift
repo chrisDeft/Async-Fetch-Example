@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwiftTableViewCell: UITableViewCell {
+class Swift3TableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
@@ -19,7 +19,7 @@ class SwiftTableViewCell: UITableViewCell {
         didSet {
             guard let data = commitData else { return }
             
-            dateLabel?.text = data.date.description
+            dateLabel?.text = DateFormatter.localizedString(from: data.date, dateStyle: .medium, timeStyle: .short)
             userLabel?.text = data.name
             messageLabel?.text = data.message
         }
@@ -27,11 +27,11 @@ class SwiftTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        dateLabel.font = UIFont(name: "Avenir-Light", size:20) ?? .systemFont(ofSize: 20)
+        dateLabel.font = UIFont(name: FontName.AvenirLight, size:20) ?? .systemFont(ofSize: 20)
         dateLabel.textColor = .black
-        userLabel.font = UIFont(name: "Avenir-Light", size:20) ?? .systemFont(ofSize: 20)
+        userLabel.font = UIFont(name: FontName.AvenirLight, size:20) ?? .systemFont(ofSize: 20)
         userLabel.textColor = .black
-        messageLabel.font = UIFont(name: "Avenir-Light", size:14) ?? .systemFont(ofSize: 14)
+        messageLabel.font = UIFont(name: FontName.AvenirLight, size:14) ?? .systemFont(ofSize: 14)
         messageLabel.textColor = .black
     }
 

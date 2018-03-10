@@ -22,6 +22,13 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
+    _stringToDateFormatter = [[NSDateFormatter alloc] init];
+    _stringToDateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
+    
+    _dateToStringFormatter = [[NSDateFormatter alloc] init];
+    _dateToStringFormatter.dateStyle = NSDateFormatterMediumStyle;
+    _dateToStringFormatter.timeStyle = NSDateFormatterShortStyle;
+    
     _refreshController = [[UIRefreshControl alloc] init];
     [_refreshController addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
     
@@ -60,7 +67,9 @@
     
     ObjCModel *commit = [_viewModel.results objectAtIndex:indexPath.row];
     
-    cell.dateLabel.text = commit.date.description;
+    NSDate *commitDate = [_stringToDateFormatter dateFromString:commit.date];
+    
+    cell.dateLabel.text = [_dateToStringFormatter stringFromDate:commitDate];
     cell.userLabel.text = commit.user;
     cell.messageLabel.text = commit.message;
     

@@ -51,7 +51,7 @@ class Swift3ViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier:"swiftCell", for: indexPath) as? SwiftTableViewCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier:"swiftCell", for: indexPath) as? Swift3TableViewCell
         {
             cell.commitData = networkFetch.results[indexPath.row] as LocalCommitData
             

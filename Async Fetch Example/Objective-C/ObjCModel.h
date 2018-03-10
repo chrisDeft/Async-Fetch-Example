@@ -11,7 +11,7 @@
 @interface ObjCModel : NSObject
 
 @property (nonatomic, strong) NSString *user;
-@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSString *date;
 @property (nonatomic, strong) NSString *message;
 
 - (instancetype)initWithData:(NSDictionary *)data;
