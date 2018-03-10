@@ -1,16 +1,16 @@
 //
-//  SwiftViewController.swift
+//  Swift4ViewController.swift
 //  Async Fetch Example
 //
-//  Created by Chris Adamson on 30/08/2017.
-//  Copyright © 2017 Chris Adamson. All rights reserved.
+//  Created by Chris Adamson on 10/03/2018.
+//  Copyright © 2018 Chris Adamson. All rights reserved.
 //
 
 import UIKit
 
-class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwiftModelUpdatedDelegate {
+class Swift4ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DataUpdatedDelegate {
     
-    fileprivate let viewModel = SwiftViewModel()
+    fileprivate let networkFetch = Swift4FetchNetworkData()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,44 +19,46 @@ class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Swift"
+        self.title = "Swift 4"
         
-        viewModel.delegate = self
+        networkFetch.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         refreshControl.addTarget(self, action: #selector(handleFetch), for: .valueChanged)
         tableView.addSubview(refreshControl)
         
+        networkFetch.fetchRequest()
+        
     }
     
-    func viewModelUpdated() {
+    func dataUpdated() {
         
         DispatchQueue.main.async { [unowned self] in
-                            self.refreshControl.endRefreshing()
-                            self.tableView.reloadData()
-                        }
+            self.refreshControl.endRefreshing()
+            self.tableView.reloadData()
+        }
     }
     
     func handleFetch() {
         
-        viewModel.fetchRequest()
+        networkFetch.fetchRequest()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel.results!.count
+        return networkFetch.results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier:"swiftCell", for: indexPath) as? SwiftTableViewCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier:"swift4Cell", for: indexPath) as? Swift4TableViewCell
         {
-            cell.commitData = viewModel.results![indexPath.row] as LocalCommit!
+            cell.commitData = networkFetch.results[indexPath.row] as CodeableLocalCommit
             
             return cell
         }
         
         return UITableViewCell()
     }
-
+    
 }

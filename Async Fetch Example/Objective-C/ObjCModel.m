@@ -17,7 +17,7 @@
     {
         
         self.date = [[[data objectForKey:@"commit"] objectForKey:@"author"] objectForKey:@"date"];
-        self.user = [[data objectForKey:@"author"] objectForKey:@"login"];
+        self.user = [[[data objectForKey:@"commit"] objectForKey:@"author"] objectForKey:@"name"];
         self.message = [[data objectForKey:@"commit"] objectForKey:@"message"];
         
     }

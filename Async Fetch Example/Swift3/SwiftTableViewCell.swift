@@ -14,13 +14,13 @@ class SwiftTableViewCell: UITableViewCell {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
-    var commitData: LocalCommit?
+    var commitData: LocalCommitData?
     {
         didSet {
             guard let data = commitData else { return }
             
             dateLabel?.text = data.date.description
-            userLabel?.text = data.login
+            userLabel?.text = data.name
             messageLabel?.text = data.message
         }
     }

@@ -30,6 +30,8 @@
     _viewModel = [[ObjCViewModel alloc] init];
     _viewModel.delegate = self;
     
+    [_viewModel performRequest];
+    
 }
 
 - (void)modelDidUpdate
