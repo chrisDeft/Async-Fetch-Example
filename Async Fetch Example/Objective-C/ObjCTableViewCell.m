@@ -17,7 +17,6 @@
     [self.userLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:20]];
     [self.messageLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:14]];
     
-    // Initialization code
 }
 
 @end
