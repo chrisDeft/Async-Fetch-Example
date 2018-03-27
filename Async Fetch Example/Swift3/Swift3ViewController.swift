@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Swift3ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DataUpdatedDelegate {
+class Swift3ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     fileprivate let networkFetch = FetchNetworkData()
     
@@ -21,22 +21,21 @@ class Swift3ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.title = "Swift 3"
         
-        networkFetch.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         refreshControl.addTarget(self, action: #selector(handleFetch), for: .valueChanged)
-        tableView.addSubview(refreshControl)
+        tableView.refreshControl = refreshControl
+        
+        networkFetch.dataUpdated = { [unowned self] in
+            
+            DispatchQueue.main.async { [unowned self] in
+                self.refreshControl.endRefreshing()
+                self.tableView.reloadData()
+            }
+        }
         
         networkFetch.fetchRequest()
         
-    }
-    
-    func dataUpdated() {
-        
-        DispatchQueue.main.async { [unowned self] in
-            self.refreshControl.endRefreshing()
-            self.tableView.reloadData()
-        }
     }
     
     func handleFetch() {

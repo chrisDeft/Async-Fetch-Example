@@ -9,15 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "ObjCModel.h"
 
-@protocol ModelUpdatedDelegate <NSObject>
-
-- (void)modelDidUpdate;
-
-@end
-
 @interface ObjCViewModel : NSObject
 
-@property (nonatomic, assign) id <ModelUpdatedDelegate> delegate;
+@property (nonatomic, strong) void (^modelUpdated)(ObjCViewModel *viewModel);
 
 @property (strong, nonatomic) NSMutableData *responseData;
 @property (strong, nonatomic) NSArray *results;

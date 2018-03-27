@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Swift4ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DataUpdatedDelegate {
+class Swift4ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     fileprivate let networkFetch = Swift4FetchNetworkData()
     
@@ -21,11 +21,18 @@ class Swift4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.title = "Swift 4"
         
-        networkFetch.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         refreshControl.addTarget(self, action: #selector(handleFetch), for: .valueChanged)
-        tableView.addSubview(refreshControl)
+        tableView.refreshControl = refreshControl
+        
+        networkFetch.dataUpdated = { [unowned self] in
+            
+            DispatchQueue.main.async { [unowned self] in
+                self.refreshControl.endRefreshing()
+                self.tableView.reloadData()
+            }
+        }
         
         networkFetch.fetchRequest()
         
@@ -42,6 +49,7 @@ class Swift4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func handleFetch() {
         
         networkFetch.fetchRequest()
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

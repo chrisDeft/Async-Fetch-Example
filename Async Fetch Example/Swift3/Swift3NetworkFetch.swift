@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol DataUpdatedDelegate {
-    
-    func dataUpdated ()
-}
-
 struct LocalCommitData {
     
     let name: String
@@ -22,11 +17,12 @@ struct LocalCommitData {
 
 class FetchNetworkData {
     
-    var delegate: DataUpdatedDelegate?
+    var dataUpdated: (()->())?
+    
     var results: [LocalCommitData] = [] {
         didSet {
             
-            self.delegate?.dataUpdated()
+            self.dataUpdated?()
         }
     }
     

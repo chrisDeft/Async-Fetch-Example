@@ -29,11 +29,12 @@ struct CodeableLocalCommit: Codable
 
 class Swift4FetchNetworkData {
     
-    var delegate: DataUpdatedDelegate?
+    var dataUpdated: (()->())?
+    
     var results: [CodeableLocalCommit] = [] {
         didSet {
             
-            self.delegate?.dataUpdated()
+            self.dataUpdated?()
         }
     }
     

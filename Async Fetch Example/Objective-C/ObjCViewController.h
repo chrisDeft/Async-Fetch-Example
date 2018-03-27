@@ -10,10 +10,10 @@
 #import "ObjCViewModel.h"
 #import "ObjCTableViewCell.h"
 
-@interface ObjCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ModelUpdatedDelegate>
+@interface ObjCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) UIRefreshControl *refreshController;
+
 @property (strong, nonatomic) NSDateFormatter *stringToDateFormatter;
 @property (strong, nonatomic) NSDateFormatter *dateToStringFormatter;
 

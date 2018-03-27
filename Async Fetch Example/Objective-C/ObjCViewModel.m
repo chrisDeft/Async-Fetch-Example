@@ -71,7 +71,10 @@
     
     _results = tempResults;
     
-    [_delegate modelDidUpdate];
+    if (_modelUpdated) {
+        
+        _modelUpdated(self);
+    }
     
 }
 

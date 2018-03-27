@@ -29,25 +29,28 @@
     _dateToStringFormatter.dateStyle = NSDateFormatterMediumStyle;
     _dateToStringFormatter.timeStyle = NSDateFormatterShortStyle;
     
-    _refreshController = [[UIRefreshControl alloc] init];
-    [_refreshController addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
-    
-    [_tableView addSubview:_refreshController];
+    _tableView.refreshControl = [[UIRefreshControl alloc] init];
+    [_tableView.refreshControl addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
     
     _viewModel = [[ObjCViewModel alloc] init];
-    _viewModel.delegate = self;
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [_viewModel setModelUpdated:^(ObjCViewModel *viewModel) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+
+            __strong typeof(self) strongSelf = weakSelf;
+
+            [strongSelf.tableView.refreshControl endRefreshing];
+            [strongSelf.tableView reloadData];
+        });
+    }];
     
     [_viewModel performRequest];
     
 }
 
-- (void)modelDidUpdate
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_refreshController endRefreshing];
-        [_tableView reloadData];
-    });
-}
 
 - (void)handleRefresh:(id)sender
 {
