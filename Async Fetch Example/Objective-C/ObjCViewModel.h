@@ -11,7 +11,7 @@
 
 @interface ObjCViewModel : NSObject
 
-@property (nonatomic, strong) void (^modelUpdated)(ObjCViewModel *viewModel);
+@property (nonatomic, copy) void (^modelUpdated)(void);
 
 @property (strong, nonatomic) NSMutableData *responseData;
 @property (strong, nonatomic) NSArray *results;

@@ -73,7 +73,7 @@
     
     if (_modelUpdated) {
         
-        _modelUpdated(self);
+        _modelUpdated();
     }
     
 }

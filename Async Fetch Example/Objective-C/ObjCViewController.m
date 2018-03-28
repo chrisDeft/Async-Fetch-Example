@@ -36,7 +36,7 @@
     
     __weak typeof(self) weakSelf = self;
     
-    [_viewModel setModelUpdated:^(ObjCViewModel *viewModel) {
+    [_viewModel setModelUpdated:^(void) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
 
